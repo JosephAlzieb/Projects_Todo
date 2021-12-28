@@ -1,6 +1,8 @@
 package de.hhu.projectstodo.domain;
 
-public record Unternehmen (Long id, String name, String vertreter) {
+import javax.persistence.Id;
+
+public record Unternehmen (@Id Long id, String name, String vertreter) {
 
     public Unternehmen {
     }

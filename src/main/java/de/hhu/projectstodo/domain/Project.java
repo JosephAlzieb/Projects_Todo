@@ -2,9 +2,11 @@ package de.hhu.projectstodo.domain;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 public record Project(
+        @Id
         Long id,
         String title,
         String type,
