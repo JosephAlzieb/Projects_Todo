@@ -6,13 +6,16 @@ import de.hhu.projectstodo.repositories.ProjectRepository;
 import java.util.List;
 
 public class ProjectRepositoryImpl implements ProjectRepository {
+
+    private ProjectRepositoryDao repositoryDao;
+
     @Override
     public List<Project> getAllProjects() {
-        return null;
+        return repositoryDao.findAll();
     }
 
     @Override
     public void saveProject(Project project) {
-
+        repositoryDao.save(project);
     }
 }
