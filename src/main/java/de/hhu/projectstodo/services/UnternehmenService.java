@@ -10,11 +10,11 @@ public class UnternehmenService {
 
     private UnternehmenRepositoryImpl repo;
 
-    List<Unternehmen> getUnternehmen() {
+    public List<Unternehmen> getUnternehmen() {
         return repo.getAllUnternehmen();
     }
 
-    void saveUnternehmen(Unternehmen unternehmen){
+    public void saveUnternehmen(Unternehmen unternehmen){
         repo.saveUnternehmen(unternehmen);
     }
 }

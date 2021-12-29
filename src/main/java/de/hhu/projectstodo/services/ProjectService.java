@@ -11,11 +11,11 @@ public class ProjectService {
 
     private ProjectRepositoryImpl repo;
 
-    List<Project> getProjects() {
+    public List<Project> getProjects() {
         return repo.getAllProjects();
     }
 
-    void saveProject(Project project){
+    public void saveProject(Project project){
         repo.saveProject(project);
     }
 }
