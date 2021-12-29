@@ -3,10 +3,11 @@ package de.hhu.projectstodo.domain;
 import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-@Table("Project")
+@Entity(name="Project")
 public record Project(
         @Id
         Integer id,
@@ -21,4 +22,5 @@ public record Project(
 
     public Project {
     }
-}
+
+    }
