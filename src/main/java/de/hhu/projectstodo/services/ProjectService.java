@@ -9,7 +9,11 @@ import java.util.List;
 
 public class ProjectService {
 
-    private ProjectRepositoryImpl repo;
+    private ProjectRepository repo;
+
+    public ProjectService(ProjectRepository repo) {
+        this.repo = repo;
+    }
 
     public List<Project> getProjects() {
         return repo.getAllProjects();
