@@ -8,4 +8,5 @@ public interface UnternehmenRepository {
 
     List<Unternehmen> getAllUnternehmen();
     void saveUnternehmen (Unternehmen unternehmen);
+    Unternehmen findUnternehmenById(int id);
 }
