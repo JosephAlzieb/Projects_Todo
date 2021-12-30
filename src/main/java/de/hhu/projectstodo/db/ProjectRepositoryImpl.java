@@ -24,4 +24,9 @@ public class ProjectRepositoryImpl implements ProjectRepository {
     public void saveProject(Project project) {
         repositoryDao.save(project);
     }
+
+    @Override
+    public Project findProjectById(int id) {
+        return repositoryDao.findById(id).get();
+    }
 }
