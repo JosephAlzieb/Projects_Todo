@@ -1,6 +1,9 @@
 package de.hhu.projectstodo.domain;
 
-import javax.persistence.Id;
+
+import org.springframework.data.annotation.Id;
 
 public record Unternehmen (@Id Integer id, String name, String vertreter) {
 }
+
+//import javax.persistence.Id;

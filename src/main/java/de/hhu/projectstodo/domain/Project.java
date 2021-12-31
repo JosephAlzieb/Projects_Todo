@@ -1,10 +1,7 @@
 package de.hhu.projectstodo.domain;
+import org.springframework.data.annotation.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -24,7 +21,7 @@ public class Project {
     private LocalDateTime launchDate;
     private Set<UnternehmenRef> unternehmen = new HashSet<>();
 
-    void addUnternehmen(Unternehmen un){
+    public void addUnternehmen(Unternehmen un){
         unternehmen.add(new UnternehmenRef(un.id()));
     }
 
