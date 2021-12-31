@@ -1,4 +1,4 @@
-package de.hhu.projectstodo;
+package de.hhu.projectstodo.config;
 
 import de.hhu.projectstodo.repositories.ProjectRepository;
 import de.hhu.projectstodo.repositories.UnternehmenRepository;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class Config {
+public class MyConfiguration {
 
     @Bean
     public UnternehmenService unternehmenService(UnternehmenRepository unternehmenRepository){
@@ -16,7 +16,7 @@ public class Config {
     }
 
     @Bean
-    public ProjectService unternehmenService(ProjectRepository projectRepository){
+    public ProjectService projectService(ProjectRepository projectRepository){
         return new ProjectService(projectRepository);
     }
 
