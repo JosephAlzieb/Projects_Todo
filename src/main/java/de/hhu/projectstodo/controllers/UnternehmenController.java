@@ -26,7 +26,14 @@ public class UnternehmenController {
     @PostMapping("saveunter")
     String saveUnternehmen (Model model, @ModelAttribute("unternehmen") Unternehmen unternehmen){
         System.out.println(unternehmen);
-//        service.saveUnternehmen(unternehmen);
-        return "unterForm";
+        model.addAttribute("unternehemn", unternehmen);
+        service.saveUnternehmen(unternehmen);
+        model.addAttribute("succes", "Sie habe das Unternehmen erfolgreich registriert");
+        return "result-unternehmen";
+
+//        else {
+//            model.addAttribute("error", "Das Unternehmen ist leider nicht registriert worden");
+//        }
+//        return "unterForm";
     }
 }
