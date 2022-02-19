@@ -17,7 +17,7 @@ create table project
     description text ,
     days int ,
     price decimal ,
-    launchDate datetime ,
+    launchDate text ,
     constraint project_pk
         primary key (id)
 );
