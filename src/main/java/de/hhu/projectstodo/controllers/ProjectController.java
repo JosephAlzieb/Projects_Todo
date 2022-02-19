@@ -25,7 +25,9 @@ public class ProjectController {
 
     @PostMapping("saveproject")
     String saveProject(@ModelAttribute("project") Project project, Model model){
-        System.out.println(project.toString());
-        return "projectForm";
+        System.out.println(project);
+        service.saveProject(project);
+        model.addAttribute("succes", "Sie habe das Projekt erfolgreich registriert");
+        return "result-project";
     }
 }

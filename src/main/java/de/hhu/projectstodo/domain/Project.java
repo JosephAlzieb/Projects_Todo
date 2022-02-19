@@ -1,9 +1,8 @@
 package de.hhu.projectstodo.domain;
 import org.springframework.data.annotation.Id;
-import org.springframework.format.annotation.DateTimeFormat;
 
 
-import java.time.LocalDateTime;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,15 +16,15 @@ public class Project {
     private String description;
     private int days;
     private double price;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime launchDate;
+//    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    private String launchDate;
     private Set<UnternehmenRef> unternehmen = new HashSet<>();
 
     public void addUnternehmen(Unternehmen un){
         unternehmen.add(new UnternehmenRef(un.id()));
     }
 
-    public Project(String title, String typ, String color, String description, int days, double price, LocalDateTime launchDate) {
+    public Project(String title, String typ, String color, String description, int days, double price, String launchDate) {
         this.title = title;
         this.typ = typ;
         this.color = color;
@@ -91,15 +90,8 @@ public class Project {
         this.price = price;
     }
 
-    public LocalDateTime getLaunchDate() {
+    public String getLaunchDate() {
         return launchDate;
-    }
-
-    public void setLaunchDate(LocalDateTime launchDate) {
-        this.launchDate = launchDate;
-    }
-
-    public Project() {
     }
 
     @Override
@@ -112,8 +104,16 @@ public class Project {
                ", description='" + description + '\'' +
                ", days=" + days +
                ", price=" + price +
-               ", launchDate=" + launchDate +
+               ", launchDate='" + launchDate + '\'' +
                ", unternehmen=" + unternehmen +
                '}';
     }
+
+    public void setLaunchDate(String launchDate) {
+        this.launchDate = launchDate;
+    }
+
+    public Project() {
+    }
+
 }

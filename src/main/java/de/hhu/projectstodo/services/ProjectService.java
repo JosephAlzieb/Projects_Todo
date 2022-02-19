@@ -1,12 +1,9 @@
 package de.hhu.projectstodo.services;
 
-import de.hhu.projectstodo.db.ProjectRepositoryImpl;
 import de.hhu.projectstodo.domain.Project;
 import de.hhu.projectstodo.repositories.ProjectRepository;
 
 import java.util.List;
-
-
 public class ProjectService {
 
     private ProjectRepository repo;

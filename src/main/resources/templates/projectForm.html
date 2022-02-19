@@ -38,28 +38,48 @@
                 <input type="number" step="any" class="form-control" th:field="*{price}">
             </div>
             <div class="col-md-6 form-group">
-                <label>Launch Date</label>
-                <input type="datetime-local" class="form-control" th:field="*{launchDate}">
+                <strong>Duration:</strong>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" th:field="*{days}" id="option1" value="15">
+                    <label class="form-check-label" for="option1">15 Days</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" th:field="*{days}" id="option2" value="30">
+                    <label class="form-check-label" for="option2">30 Days</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" th:field="*{days}" id="option3" value="45">
+                    <label class="form-check-label" for="option3">45 Days</label>
+                </div>
             </div>
         </div>
+        <div class="col-md-6 form-group">
+            <label>Launch Date</label>
+            <input type="date" class="form-control" th:field="*{launchDate}">
+        </div>
+<!--        <div class="col-md-6 form-group">-->
+<!--            <label>Unternehmen</label>-->
+<!--            <input type="text" class="form-control" th:field="*{project.addUnternehmen(new Unternehmen)}">-->
+<!--        </div>-->
+        </div>
 
-<!--        <fieldset>-->
-<!--            <input type="submit" id="submitButton" th:value="Save">-->
-<!--            <input type="reset" id="resetButton" name="reset" th:value="Reset"/>-->
-<!--            <table>-->
-<!--                <thead>-->
-<!--                <tr>-->
-<!--                    <th> UnternehmenID </th>-->
-<!--                </tr>-->
-<!--                </thead>-->
-<!--                <tbody>-->
-<!--                <tr th:each="project, itemStat : *{project.unternehmen}">-->
-<!--                    <td><input th:field="*{project[__${itemStat.index}__]}" /></td>-->
-<!--&lt;!&ndash;                    <td><input th:field="*{books[__${itemStat.index}__].author}" /></td>&ndash;&gt;-->
-<!--                </tr>-->
-<!--                </tbody>-->
-<!--            </table>-->
-<!--        </fieldset>-->
+        <!--        <fieldset>-->
+        <!--            <input type="submit" id="submitButton" th:value="Save">-->
+        <!--            <input type="reset" id="resetButton" name="reset" th:value="Reset"/>-->
+        <!--            <table>-->
+        <!--                <thead>-->
+        <!--                <tr>-->
+        <!--                    <th> UnternehmenID </th>-->
+        <!--                </tr>-->
+        <!--                </thead>-->
+        <!--                <tbody>-->
+        <!--                <tr th:each="project, itemStat : *{project.unternehmen}">-->
+        <!--                    <td><input th:field="*{project[__${itemStat.index}__]}" /></td>-->
+        <!--&lt;!&ndash;                    <td><input th:field="*{books[__${itemStat.index}__].author}" /></td>&ndash;&gt;-->
+        <!--                </tr>-->
+        <!--                </tbody>-->
+        <!--            </table>-->
+        <!--        </fieldset>-->
 
         <div class="form-group">
             <label>Description</label>

@@ -29,8 +29,8 @@ public class ProjectServiceTest {
     @Test
     @DisplayName("Alle Unternehmen aus der DB holen")
     void test_2(){
-        LocalDateTime d5=LocalDateTime.of(2010,12,02,12,00);
-        Project p1 = new Project("p5","t5","red","d5",5,2200,d5);
+//        LocalDateTime d5=LocalDateTime.of(2010,12,02,12,00);
+        Project p1 = new Project("p5","t5","red","d5",5,2200,"2020-12-12 12:00");
         when(repo.getAllProjects()).thenReturn(List.of(p1));
         List<Project> projects = service.getProjects();
         assertThat(projects).hasSize(1);
